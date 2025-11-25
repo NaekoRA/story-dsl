@@ -1,0 +1,13 @@
+{
+  "scopeName": "source.story",
+  "patterns": [
+    {
+      "match": "\\\\\\w+",
+      "name": "keyword.control.story"
+    },
+    {
+      "match": "\".*?\"",
+      "name": "string.quoted.double.story"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "story-dsl",
+  "displayName": "Story DSL",
+  "publisher": "storydsl",
+  "version": "0.0.1",
+  "description": "Story DSL IntelliSense support",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onLanguage:story"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "story",
+        "aliases": [
+          "Story Script"
+        ],
+        "extensions": [
+          ".story"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "story",
+        "scopeName": "source.story",
+        "path": "./syntaxes/story.tmLanguage.json"
+      }
+    ]
+  }
+}
