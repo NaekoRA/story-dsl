@@ -3,5 +3,7 @@
   "\\goto",
   "\\bold",
   "\\clear",
-  "\\devider"
+  "\\devider",
+  "\\choice",
+  "\\battle"
 ]
