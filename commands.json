@@ -1,9 +1,42 @@
-[
-  "\\scene",
-  "\\goto",
-  "\\bold",
-  "\\clear",
-  "\\devider",
-  "\\choice",
-  "\\battle"
-]
+{
+  "commands": [
+    "\\scene",
+    "\\clear",
+    "\\divider",
+    "\\pause", 
+    "\\progress",
+    "\\choice",
+    "\\goto",
+    "\\bold",
+    {
+      "name": "\\maze",
+      "template": "\\maze map_name=\"${1:map_name}\" description=\"${2:description}\" win=${3:scene_win} lose=${4:scene_lose}",
+      "description": "Maze game dengan branching outcome"
+    },
+    {
+      "name": "\\battle",
+      "template": "\\battle win=${1:scene_win} lose=${2:scene_lose} draw=${3:scene_draw} surrender=${4:scene_surrender}",
+      "description": "Battle dengan multiple branch outcomes"
+    }
+  ],
+  "variables": [
+    "$merah",
+    "$biru", 
+    "$hijau",
+    "$kuning",
+    "$ungu",
+    "$cyan",
+    "$putih",
+    "$hitam",
+    "$reset"
+  ],
+  "configs": [
+    "difficulty=",
+    "map_name=",
+    "description=",
+    "duration=", 
+    "label=",
+    "message=",
+    "symbol="
+  ]
+}

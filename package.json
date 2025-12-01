@@ -1,35 +1,31 @@
 {
   "name": "story-dsl",
   "displayName": "Story DSL",
-  "publisher": "storydsl",
-  "version": "0.0.1",
-  "description": "Story DSL IntelliSense support",
+  "description": "Language support for Story DSL",
+  "version": "1.0.0",
   "engines": {
-    "vscode": "^1.80.0"
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [{
+      "id": "story",
+      "aliases": ["Story DSL", "story"],
+      "extensions": [".story"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "story",
+      "scopeName": "source.story",
+      "path": "./syntaxes/story.tmLanguage.json"
+    }],
+    "snippets": [{
+      "language": "story",
+      "path": "./snippets/story.json"
+    }]
   },
   "activationEvents": [
     "onLanguage:story"
   ],
-  "main": "./src/extension.js",
-  "contributes": {
-    "languages": [
-      {
-        "id": "story",
-        "aliases": [
-          "Story Script"
-        ],
-        "extensions": [
-          ".story"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
-    "grammars": [
-      {
-        "language": "story",
-        "scopeName": "source.story",
-        "path": "./syntaxes/story.tmLanguage.json"
-      }
-    ]
-  }
+  "main": "src/extension.js"
 }

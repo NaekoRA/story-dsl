@@ -1,13 +1,58 @@
 {
   "scopeName": "source.story",
+  "name": "Story DSL",
   "patterns": [
     {
-      "match": "\\\\\\w+",
+      "match": "\\\\scene\\b",
+      "name": "entity.name.scene.story"
+    },
+    {
+      "match": "\\\\(clear|divider|pause|progress|loading|goto|bold)\\b",
       "name": "keyword.control.story"
     },
     {
-      "match": "\".*?\"",
+      "match": "\\\\(battle|maze)\\b",
+      "name": "keyword.control.battle.story"
+    },
+    {
+      "match": "\\\\choice\\b",
+      "name": "keyword.control.choice.story"
+    },
+    {
+      "match": "\\$(merah|biru|hijau|kuning|ungu|cyan|putih|hitam|reset)\\b",
+      "name": "support.constant.color.story"
+    },
+    {
+      "match": "\\$\\w+",
+      "name": "variable.parameter.story"
+    },
+    {
+      "match": "\\b(win|lose|draw|surrender)\\s*=",
+      "name": "entity.name.tag.branch.story"
+    },
+    {
+      "match": "\\b(difficulty|map_name|description|duration|label|message|symbol)\\s*=",
+      "name": "entity.name.tag.config.story"
+    },
+    {
+      "match": "\\bgoto\\b",
+      "name": "keyword.operator.goto.story"
+    },
+    {
+      "match": "\"[^\"]*\"",
       "name": "string.quoted.double.story"
+    },
+    {
+      "match": "\\b\\d+\\.?\\d*\\b",
+      "name": "constant.numeric.story"
+    },
+    {
+      "match": "//.*$",
+      "name": "comment.line.double-slash.story"
     }
-  ]
+  ],
+  "repository": {},
+  "comments": {
+    "lineComment": "//"
+  }
 }
